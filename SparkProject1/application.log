@@ -1,0 +1,131 @@
+2024-03-28 19:36:28,317 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7f90984afd30>
+2024-03-28 19:36:28,317 Driver       INFO     validating spark object
+2024-03-28 19:36:28,317 Validate     INFO     Started the get_current_date function....
+2024-03-28 19:36:33,058 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 19:36:33,059 Validate     INFO     Validation done, going forward ..
+2024-03-28 19:36:33,059 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 19:36:33,059 ingest       WARNING  load_files function started
+2024-03-28 19:36:33,750 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 19:36:33,750 Driver       INFO     displaying Dataframe..
+2024-03-28 19:36:36,637 Driver       INFO     Validating number of cities...
+2024-03-28 19:36:36,637 ingest       INFO     here to count the records in the df_city
+2024-03-28 19:36:37,399 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 19:36:37,399 Driver       INFO     Application done
+2024-03-28 19:51:52,361 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7f8d4063de48>
+2024-03-28 19:51:52,361 Driver       INFO     validating spark object
+2024-03-28 19:51:52,361 Validate     INFO     Started the get_current_date function....
+2024-03-28 19:51:57,611 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 19:51:57,611 Validate     INFO     Validation done, going forward ..
+2024-03-28 19:51:57,611 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 19:51:57,611 ingest       WARNING  load_files function started
+2024-03-28 19:51:58,288 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 19:51:58,288 Driver       INFO     displaying Dataframe..
+2024-03-28 19:52:01,036 Driver       INFO     Validating number of cities...
+2024-03-28 19:52:01,036 ingest       INFO     here to count the records in the df_city
+2024-03-28 19:52:01,746 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 19:52:01,746 ingest       WARNING  load_files function started
+2024-03-28 19:52:01,749 Driver       ERROR    An error occurred when calling main() please check trace..option() got an unexpected keyword argument 'header'
+Traceback (most recent call last):
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/driver.py", line 52, in main
+    inferSchema=inferSchema)
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/ingest.py", line 12, in load_files
+    df = spark.read.format(file_format).option(header=header).option(inferSchema=inferSchema).load(file_dir)
+TypeError: option() got an unexpected keyword argument 'header'
+2024-03-28 19:53:02,625 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7f8bb05c0ef0>
+2024-03-28 19:53:02,626 Driver       INFO     validating spark object
+2024-03-28 19:53:02,626 Validate     INFO     Started the get_current_date function....
+2024-03-28 19:53:07,387 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 19:53:07,387 Validate     INFO     Validation done, going forward ..
+2024-03-28 19:53:07,387 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 19:53:07,388 ingest       WARNING  load_files function started
+2024-03-28 19:53:08,191 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 19:53:08,192 Driver       INFO     displaying Dataframe..
+2024-03-28 19:53:11,258 Driver       INFO     Validating number of cities...
+2024-03-28 19:53:11,259 ingest       INFO     here to count the records in the df_city
+2024-03-28 19:53:12,191 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 19:53:12,191 ingest       WARNING  load_files function started
+2024-03-28 19:53:12,194 Driver       ERROR    An error occurred when calling main() please check trace..option() got an unexpected keyword argument 'header'
+Traceback (most recent call last):
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/driver.py", line 52, in main
+    inferSchema=inferSchema)
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/ingest.py", line 12, in load_files
+    df = spark.read.format(file_format).option(header=header).option(inferSchema=inferSchema).load(file_dir)
+TypeError: option() got an unexpected keyword argument 'header'
+2024-03-28 19:56:34,824 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7fcfd84f9f60>
+2024-03-28 19:56:34,825 Driver       INFO     validating spark object
+2024-03-28 19:56:34,825 Validate     INFO     Started the get_current_date function....
+2024-03-28 19:56:39,909 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 19:56:39,909 Validate     INFO     Validation done, going forward ..
+2024-03-28 19:56:39,909 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 19:56:39,909 ingest       WARNING  load_files function started
+2024-03-28 19:56:40,636 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 19:56:40,637 Driver       INFO     displaying Dataframe..
+2024-03-28 19:56:43,361 Driver       INFO     Validating number of cities...
+2024-03-28 19:56:43,361 ingest       INFO     here to count the records in the df_city
+2024-03-28 19:56:44,127 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 19:56:44,127 ingest       WARNING  load_files function started
+2024-03-28 19:56:44,130 Driver       ERROR    An error occurred when calling main() please check trace..option() got an unexpected keyword argument 'header'
+Traceback (most recent call last):
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/driver.py", line 52, in main
+    inferSchema=inferSchema)
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/ingest.py", line 13, in load_files
+    df = spark.read.format(file_format).option(header=header).option(inferSchema=inferSchema).load(file_dir)
+TypeError: option() got an unexpected keyword argument 'header'
+2024-03-28 19:58:15,953 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7ff2c8539f98>
+2024-03-28 19:58:15,953 Driver       INFO     validating spark object
+2024-03-28 19:58:15,953 Validate     INFO     Started the get_current_date function....
+2024-03-28 19:58:20,861 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 19:58:20,861 Validate     INFO     Validation done, going forward ..
+2024-03-28 19:58:20,861 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 19:58:20,861 ingest       WARNING  load_files function started
+2024-03-28 19:58:21,614 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 19:58:21,615 Driver       INFO     displaying Dataframe..
+2024-03-28 19:58:24,375 Driver       INFO     Validating number of cities...
+2024-03-28 19:58:24,375 ingest       INFO     here to count the records in the df_city
+2024-03-28 19:58:25,110 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 19:58:25,110 ingest       WARNING  load_files function started
+2024-03-28 19:58:25,114 Driver       ERROR    An error occurred when calling main() please check trace..option() got an unexpected keyword argument 'inferSchema'
+Traceback (most recent call last):
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/driver.py", line 52, in main
+    inferSchema=inferSchema)
+  File "/Users/paresh.jadhav/PycharmProjects/SparkProject/ingest.py", line 13, in load_files
+    df = spark.read.format(file_format).option("header",header).option(inferSchema=inferSchema).load(file_dir)
+TypeError: option() got an unexpected keyword argument 'inferSchema'
+2024-03-28 19:59:18,733 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7fb228089f28>
+2024-03-28 19:59:18,734 Driver       INFO     validating spark object
+2024-03-28 19:59:18,734 Validate     INFO     Started the get_current_date function....
+2024-03-28 19:59:23,580 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 19:59:23,581 Validate     INFO     Validation done, going forward ..
+2024-03-28 19:59:23,581 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 19:59:23,581 ingest       WARNING  load_files function started
+2024-03-28 19:59:24,271 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 19:59:24,271 Driver       INFO     displaying Dataframe..
+2024-03-28 19:59:27,001 Driver       INFO     Validating number of cities...
+2024-03-28 19:59:27,002 ingest       INFO     here to count the records in the df_city
+2024-03-28 19:59:27,926 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 19:59:27,927 ingest       WARNING  load_files function started
+2024-03-28 19:59:32,786 ingest       INFO     dataframe created successfully which is of csv
+2024-03-28 19:59:32,787 Driver       INFO     displaying Dataframe df_fact
+2024-03-28 19:59:33,420 Driver       INFO     Validating number of records in fact...
+2024-03-28 19:59:33,420 ingest       INFO     here to count the records in the df_fact
+2024-03-28 19:59:33,763 ingest       INFO     Number of records present in the df_fact are 28338
+2024-03-28 19:59:33,764 Driver       INFO     Application done
+2024-03-28 20:00:58,929 Driver       INFO     Spark session started....<pyspark.sql.session.SparkSession object at 0x7ff0d01e1f98>
+2024-03-28 20:00:58,929 Driver       INFO     validating spark object
+2024-03-28 20:00:58,930 Validate     INFO     Started the get_current_date function....
+2024-03-28 20:01:03,732 Validate     INFO     Validating spark object with current date [Row(current_date()=datetime.date(2024, 3, 28))] 
+2024-03-28 20:01:03,733 Validate     INFO     Validation done, going forward ..
+2024-03-28 20:01:03,733 Driver       INFO     Reading file which is of file format, parquet
+2024-03-28 20:01:03,733 ingest       WARNING  load_files function started
+2024-03-28 20:01:04,380 ingest       INFO     dataframe created successfully which is of parquet
+2024-03-28 20:01:04,380 Driver       INFO     displaying Dataframe..
+2024-03-28 20:01:07,027 Driver       INFO     Validating number of cities...
+2024-03-28 20:01:07,027 ingest       INFO     here to count the records in the df_city
+2024-03-28 20:01:07,796 ingest       INFO     Number of records present in the df_city are 28338
+2024-03-28 20:01:07,797 ingest       WARNING  load_files function started
+2024-03-28 20:01:12,772 ingest       INFO     dataframe created successfully which is of csv
+2024-03-28 20:01:12,772 Driver       INFO     displaying Dataframe df_fact
+2024-03-28 20:01:13,397 Driver       INFO     Validating number of records in fact...
+2024-03-28 20:01:13,397 ingest       INFO     here to count the records in the df_fact
+2024-03-28 20:01:14,176 ingest       INFO     Number of records present in the df_fact are 1329329
+2024-03-28 20:01:14,176 Driver       INFO     Application done
