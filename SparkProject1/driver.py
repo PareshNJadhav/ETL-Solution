@@ -1,12 +1,14 @@
 import os
 import sys
+from time import perf_counter
 import get_env_variables as env
 from create_spark import get_spark_object
 from validate import get_current_date, print_schema, check_for_nulls
 from logger import get_logger
 from ingest import load_files, display_df, df_count
 from data_processing import data_clean
-from data_transformations import data_report1
+from data_transformations import data_report1, data_report2
+from extraction import extract_file
 
 
 # import data_processing # to avoid unneccesary imports such as logger and other packages
@@ -76,10 +78,23 @@ def main():
         display_df(check_df, 'df_fact')
 
         logger.info('data_transformation executing...')
-        df_report1 = data_report1(df_city_sel,df_presc_sel)
+        df_report1 = data_report1(df_city_sel, df_presc_sel)
 
-        logger.info('displaying the data_report_df...')
-        display_df(df_report1, 'data_report')
+        logger.info('displaying the data_report1...')
+        display_df(df_report1, 'data_report1')
+
+        df_report2 = data_report2(df_presc_sel)
+
+        logger.info('displaying the data_report2...')
+        display_df(df_report2, 'data_report2')
+
+        logger.info('writing data to output folders for dataframes df_report1 and df_report2 ')
+        city_path = env.city_path
+        presc_path = env.presc_path
+        extract_file(df_report1, 'orc', city_path, 1, False, 'snappy')
+        extract_file(df_report2, 'parquet', presc_path, 2, False, 'snappy')
+
+        logger.info('extracting files to output completed.. ')
 
     except Exception as e:
         logger.error('An error occurred when calling main() please check trace..{}'.format(e), exc_info=True)
@@ -91,7 +106,10 @@ def main():
 if __name__ == '__main__':
     try:
         logger = get_logger('Driver')
+        start_time = perf_counter()
         main()
+        end_time = perf_counter()
+        logger.info(f"total amount of time taken by job {end_time - start_time} seconds")
         logger.info("Application done")
     except Exception as e:
         logger.error('An error occurred when calling main() please check trace..{}'.format(e), exc_info=True)

@@ -14,7 +14,7 @@ pip install pyspark
 
 ## Contributing
 
-This project was a part of a learning exercise but you can fork it and add your own logic changes as per your requirements.
+This project was a part of a learning exercise. You can fork it and add your own logic changes as per your requirements.
 
 ## What is the final outcome from the datasets?
 
@@ -25,4 +25,8 @@ This project was a part of a learning exercise but you can fork it and add your 
    = out of whole dataset of prescriber's we want distinct prescribers
 
 3. Don't create a report for city if no prescriber are present for that city.
+
+4. Filter out prescribers only from age between 20 and 50 yrs of experience and rank them based on their transaction count tx_cnt for each state.
+
+5. After data clean and transformations save the output of the dataframes to output folder in ORC format.
 

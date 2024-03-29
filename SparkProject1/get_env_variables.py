@@ -11,6 +11,8 @@ env = os.environ['env']
 app_name = 'Pyspark App'
 
 current_path = os.getcwd()
-source_olap = current_path+ '/source/olap'
-source_oltp = current_path+ '/source/oltp'
-properties_path = current_path+ '/properties/config'
+source_olap = current_path + '/source/olap'
+source_oltp = current_path + '/source/oltp'
+properties_path = current_path + '/properties/config'
+city_path = current_path + '/output/cities'
+presc_path = current_path + '/output/prescribers'

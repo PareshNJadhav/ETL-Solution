@@ -37,7 +37,7 @@ def data_clean(df1, df2):
         df_presc_sel = df_presc_sel.withColumn('years_of_exp', col('years_of_exp').cast('int'))
 
         logger.warning('concat firstname and lastname..')
-        df_presc_sel = df_presc_sel.withColumn('fullName', concat_ws(' ', 'presc_fname', 'presc_lname'))
+        df_presc_sel = df_presc_sel.withColumn('presc_fullname', concat_ws(' ', 'presc_fname', 'presc_lname'))
 
         logger.warning('dropping columns presc_fname and presc_lname..')
         df_presc_sel = df_presc_sel.drop('presc_fname', 'presc_lname')
