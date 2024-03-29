@@ -15,7 +15,7 @@ def load_files(spark, file_dir, file_format, header, inferSchema):
         logger.error("An erroe occured while loading files..", str(e))
         raise
     else:
-        logger.info("dataframe created successfully which is of {} format".format(file_format))
+        logger.warning("dataframe created successfully which is of {} format".format(file_format))
 
     return df
 
@@ -30,10 +30,11 @@ def display_df(df, dfname):
 
 def df_count(df, dfName):
     try:
-        logger.info('here to count the records in the {}'.format(dfName))
+        logger.warning('here to count the records in the {}'.format(dfName))
         count = df.count()
     except Exception as e:
         raise e
     else:
-        logger.info("Number of records present in the {} are {}".format(dfName, count))
+        logger.warning("Number of records present in the {} are {}".format(dfName, count))
     return count
+

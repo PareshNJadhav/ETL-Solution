@@ -1,8 +1,7 @@
 import logging
 
+
 def get_logger(name='root'):
-
-
     logger = logging.getLogger(name)
     # create handler
     file_handler = logging.FileHandler('application.log')
@@ -16,7 +15,7 @@ def get_logger(name='root'):
 
     # set log level
     file_handler.setLevel(logging.INFO)
-    stream_handler.setLevel(logging.INFO)
+    stream_handler.setLevel(logging.WARN)
 
     # add handler to logger
     logger.addHandler(file_handler)

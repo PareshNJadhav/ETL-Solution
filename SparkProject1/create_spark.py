@@ -7,7 +7,7 @@ logger = logging.getLogger('create_spark')
 def get_spark_object(env,appname):
     try:
 
-        logger.info("get_spark_object function started...")
+        logger.warning("get_spark_object function started...")
         '''Master represents cluster on which code is running, so if env is DEV use Master cluster else if env is 
         PROD use YARN cluster'''
         if env == 'DEV':
@@ -15,7 +15,7 @@ def get_spark_object(env,appname):
         else:
             master = 'YARN'
 
-        logger.info("master is {}...".format(master))
+        logger.warning("master is {}...".format(master))
         spark = SparkSession.builder.master(master).appName(appname).getOrCreate()
         return spark
 
@@ -24,4 +24,4 @@ def get_spark_object(env,appname):
         sys.exit(1)
 
     else:
-        logger.info('Spark object is created.. ')
+        logger.warning('Spark object is created.. ')
